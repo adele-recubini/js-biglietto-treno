@@ -8,9 +8,18 @@
 // creo due variabili e le trasformo con il parseInt stringhe in interi
 
 var numberKm = parseInt(prompt('quanti km farai?'));
-// var age = parseInt(prompt('quanti anni hai?'));
-
+var age = parseInt(prompt('quanti anni hai?'));
 var outputBox = document.getElementById('output');
-
 var price = numberKm * 0.21;
-outputBox.append(price);
+// outputBox.append(price);
+var discountFirst = price - 0.2;
+var discountSecond = price - 0.4;
+
+
+if (age < 18 ){
+outputBox.append(discountFirst);
+}
+
+if (age > 65 ){
+outputBox.append(discountSecond);
+}
