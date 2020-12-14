@@ -19,7 +19,7 @@ if (age < 18 ){
 outputBox.append(discountFirst);
 } else {
 
-  if(age >= 18) {
+  if(age <= 65) {
     outputBox.append(price);
   } else if(age > 65) {
       outputBox.append(discountSecond);
