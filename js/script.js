@@ -12,14 +12,16 @@ var age = parseInt(prompt('quanti anni hai?'));
 var outputBox = document.getElementById('output');
 var price = numberKm * 0.21;
 // outputBox.append(price);
-var discountFirst = price - 0.2;
-var discountSecond = price - 0.4;
-
+var discountFirst = price - (price *0.2);
+var discountSecond = price - (price *0.4);
 
 if (age < 18 ){
 outputBox.append(discountFirst);
-}
+} else {
 
-if (age > 65 ){
-outputBox.append(discountSecond);
-}
+  if(age >= 18) {
+    outputBox.append(price);
+  } else if(age > 65) {
+      outputBox.append(discountSecond);
+  }
+  }
